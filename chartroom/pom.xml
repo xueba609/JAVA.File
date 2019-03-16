@@ -12,6 +12,110 @@
         <module>Service</module>
         <module>Client</module>
     </modules>
+    <!--描述-->
+    <description>这是一个简单的聊天室</description>
+    <developers>
+        <developer>
+            <id>01</id>
+            <name>学霸609</name>
+            <email>WangHaiBao9712@163.com</email>
+            <roles>
+                <role>create</role>
+                <role>developer</role>
+            </roles>
+        </developer>
+    </developers>
+    <!--基本属性-->
+    <properties>
+        <!--配置编码-->
+        <encoding>UTF-8</encoding>
+        <!--配置JDK版本-->
+        <java.version>1.8</java.version>
+        <!--配置Maven内置属性 [可选，但可以覆盖]-->
+        <!--语法级别-->
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <!--编译级别-->
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+    </properties>
+
+    <!--配置依赖的jar包-->
+    <dependencies>
+        <!--使用第三方的jar包，需要在https://search.maven.org这个网站上搜索并获取jar包的坐标-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.47</version>
+        </dependency>
+
+    </dependencies>
 
 
+    <!--配置构建信息-->
+    <build>
+        <plugins>
+            <!--插件也是有maven管理并且构建的一个程序，插件也有坐标，插件是支撑maven工作-->
+            <!--配置编译插件-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.0</version>
+                <!--配置内置属性之后，可选-->
+                <!--<configuration>-->
+                <!--<encoding>${encoding}</encoding>-->
+                <!--<source>${java.version}</source>-->
+                <!--<testSource>${java.version}</testSource>-->
+                <!--<target>${java.version}</target>-->
+                <!--<testTarget>${java.version}</testTarget>-->
+                <!--</configuration>-->
+            </plugin>
+
+            <!-- 复制依赖的jar到classpath -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>3.1.1</version>
+                <!--配置插件的执行目标-->
+                <executions>
+                    <execution>
+                        <id>copy</id>
+                        <phase>
+                            package
+                        </phase>
+                        <goals>
+                            <goal>copy-dependencies</goal>
+                        </goals>
+                        <configuration>
+                            <!-- project/target/lib
+                            project.build.directory  = target
+                            -->
+                            <outputDirectory>
+                                ${project.build.directory}/lib
+                            </outputDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!--jar:用来生成jar文件-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.1.1</version>
+                <configuration>
+                    <archive>
+                        <!--在manifest中配置的属性一定注意大小写-->
+                        <manifest>
+                            <!--主类-->
+                            <mainClass>com.bittech.jdbc.TestJdbcTemplate</mainClass>
+
+                            <!--表示：将依赖的jar路径添加到classpath-->
+                            <addClasspath>true</addClasspath>
+                            <!--表示：依赖的jar在lib目录指定lib为classpath的前缀-->
+                            <classpathPrefix>lib</classpathPrefix>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
