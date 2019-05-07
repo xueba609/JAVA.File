@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--DTD约束/schema约束-->
+<!--需求:contact.xml 使用xml完成一个联系人通讯录
+描述编号,姓名,性别,联系方式,邮箱,地址 并且联系人有多个(xml中有且仅有一个根节点)-->
+<!--<concat name="张三" id="001" gender="男" phone="13688886666" email="zhangsan@qq.com"> </concat>-->
+<contact-list>
+    -<contact id="001">
+    <name>张三</name>
+    <gender>男</gender>
+    <phone>13688886666</phone>
+    <email>zhangsan@qq.com</email>
+    <address>西安</address>
+</contact>
+    -<contact id="002">
+    <name>李四</name>
+    <name>陈六</name>
+    <gender>女</gender>
+    <phone>13688886666</phone>
+    <email>lisi@qq.com</email>
+    <address>咸阳</address>
+</contact>
+    <student id="s1"> </student>
+</contact-list>
