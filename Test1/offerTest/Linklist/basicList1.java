@@ -1,7 +1,7 @@
 package offerTest.Linklist;
 public class basicList1 {
     public static void main(String[] args) {
-       /* Node n1 = new Node(1);
+        Node n1 = new Node(1);
         Node n2 = new Node(2);
         Node n3 = new Node(3);
         Node n4 = new Node(4);
@@ -30,6 +30,6 @@ public class basicList1 {
 
         }
         return true; //如果tmp2为null，说明元素只有一个，也可以说明是存在环
-    }*/
+    }
 }
     }

@@ -17,14 +17,17 @@ public class basicList{
     //添加链表
     public void addNode(char data) {
         Node newNode = new Node(data);
-        if (head == null) {
+        if (head == null)
+        {
             head = newNode;
             return ;
         }
         Node temp = head;
         Node cur=null;
-        while (temp.next != null) {
-            if(temp.data==data) {
+        while (temp.next != null)
+        {
+            if(temp.data==data)
+            {
                 cur = temp;
             }
             temp = temp.next;
