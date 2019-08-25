@@ -1,0 +1,16 @@
+package com.hrms.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+
+@Controller
+@RequestMapping(value = "/hrms")
+public class MainController {
+
+    @RequestMapping(value = "companyinfo", method = RequestMethod.GET)
+    public String company_info(){
+        return "/companyInfo";
+    }
+}
