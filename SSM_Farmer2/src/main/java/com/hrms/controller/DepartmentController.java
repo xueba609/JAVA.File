@@ -15,6 +15,7 @@ import java.util.List;
 @RequestMapping(value = "/hrms/dept")
 public class DepartmentController {
 
+    //调用service层
     @Autowired
     DepartmentService departmentService;
 
