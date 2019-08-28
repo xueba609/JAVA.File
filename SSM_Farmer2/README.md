@@ -47,5 +47,7 @@ CREATE TABLE `tbl_dept`(
 （5）MyBasits配置文件：resources/MyBatis.xml.
 
 **2 SSM项目的流程图**
+
 框架流程：
-![SSM框架流程](https://github.com/xueba609/JAVA.File/blob/master/%E5%9B%BE%E7%89%87/SSM.png)
+![SSM框架流程]
+(https://github.com/xueba609/JAVA.File/blob/master/%E5%9B%BE%E7%89%87/SSM.png)
