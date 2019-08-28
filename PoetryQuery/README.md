@@ -669,11 +669,11 @@ public class WebController {
     }
 }
 ```
-##项目效果
-===
+项目效果：
 
 页面展示图：
 ![诗人和诗的数量](https://github.com/xueba609/JAVA.File/blob/master/%E5%9B%BE%E7%89%87/%E8%AF%97%E4%BA%BA%E5%92%8C%E8%AF%97%E7%9A%84%E6%95%B0%E9%87%8F.png)
+
 页面展示图：
 ![词和词的数量](https://github.com/xueba609/JAVA.File/blob/master/%E5%9B%BE%E7%89%87/%E8%AF%8D%E5%92%8C%E8%AF%8D%E7%9A%84%E9%A2%91%E7%8E%87.png)
 
